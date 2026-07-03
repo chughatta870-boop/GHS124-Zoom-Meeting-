@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ur">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>MeetRoom — Online Video Meeting</title>
+<meta name="theme-color" content="#0d1117">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%23161b22'/><path d='M18 22h20a6 6 0 0 1 6 6v8a6 6 0 0 1-6 6H18a6 6 0 0 1-6-6v-8a6 6 0 0 1 6-6z' fill='%233fb950'/><path d='M46 28l10-6v20l-10-6z' fill='%233fb950'/></svg>">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===== LOBBY SCREEN ===== -->
+<section id="lobby" class="screen active">
+  <div class="lobby-card">
+    <div class="brand">
+      <span class="brand-mark"></span>
+      <h1>MeetRoom</h1>
+    </div>
+    <p class="tag">Seedhi browser se video meeting — koi install nahi.</p>
+
+    <div class="preview-wrap">
+      <video id="previewVideo" autoplay playsinline muted></video>
+      <div id="previewOff" class="preview-off">Camera band hai</div>
+      <div class="preview-controls">
+        <button id="previewMic" class="pill on" title="Mic on/off">🎤</button>
+        <button id="previewCam" class="pill on" title="Camera on/off">📷</button>
+      </div>
+    </div>
+
+    <label class="field-label" for="nameInput">Aapka naam</label>
+    <input id="nameInput" type="text" placeholder="e.g. Mohammed" maxlength="30">
+
+    <div class="lobby-actions">
+      <button id="createBtn" class="btn primary">➕ Nayi Meeting Banayein</button>
+
+      <div class="divider"><span>ya</span></div>
+
+      <label class="field-label" for="joinInput">Meeting ID / Link daalein</label>
+      <div class="join-row">
+        <input id="joinInput" type="text" placeholder="Meeting ID ya link paste karein">
+        <button id="joinBtn" class="btn secondary">Shamil Hon</button>
+      </div>
+    </div>
+
+    <p id="lobbyStatus" class="status-line"></p>
+  </div>
+</section>
+
+<!-- ===== IN-CALL SCREEN ===== -->
+<section id="room" class="screen">
+  <header class="room-top">
+    <div class="room-id-wrap">
+      <span class="dot-live"></span>
+      <span id="roomIdLabel">—</span>
+      <button id="copyLinkBtn" class="chip" title="Link copy karein">🔗 Link Copy</button>
+    </div>
+    <div class="room-timer" id="callTimer">00:00</div>
+  </header>
+
+  <main id="videoGrid" class="video-grid">
+    <!-- video tiles injected here -->
+  </main>
+
+  <p id="roomStatus" class="status-line room-status"></p>
+
+  <footer class="controls-bar">
+    <button id="micBtn" class="ctrl on" title="Mute/Unmute">
+      <span class="icon">🎤</span><span class="lbl">Mute</span>
+    </button>
+    <button id="camBtn" class="ctrl on" title="Camera on/off">
+      <span class="icon">📷</span><span class="lbl">Camera</span>
+    </button>
+    <button id="shareBtn" class="ctrl" title="Screen share">
+      <span class="icon">🖥️</span><span class="lbl">Share</span>
+    </button>
+    <button id="leaveBtn" class="ctrl danger" title="Meeting chodein">
+      <span class="icon">📞</span><span class="lbl">Leave</span>
+    </button>
+  </footer>
+</section>
+
+<!-- ===== INSTALL TOAST ===== -->
+<div id="installToast" class="toast hidden">
+  <span>App install karein taake offline bhi khulti rahe</span>
+  <button id="installBtn" class="btn tiny">Install</button>
+  <button id="dismissInstall" class="btn tiny ghost">×</button>
+</div>
+
+<script src="https://unpkg.com/peerjs@1.5.4/dist/peerjs.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
