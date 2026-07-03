@@ -1,0 +1,25 @@
+{
+  "name": "MeetRoom — Online Video Meeting",
+  "short_name": "MeetRoom",
+  "description": "Browser-based video meeting app with mute, camera toggle aur screen share.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#0d1117",
+  "theme_color": "#0d1117",
+  "icons": [
+    {
+      "src": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxOTIgMTkyIj48cmVjdCB3aWR0aD0iMTkyIiBoZWlnaHQ9IjE5MiIgcng9IjM2IiBmaWxsPSIjMTYxYjIyIi8+PHBhdGggZD0iTTU0IDY2aDYwYTE4IDE4IDAgMCAxIDE4IDE4djI0YTE4IDE4IDAgMCAxLTE4IDE4SDU0YTE4IDE4IDAgMCAxLTE4LTE4Vjg0YTE4IDE4IDAgMCAxIDE4LTE4eiIgZmlsbD0iIzNmYjk1MCIvPjxwYXRoIGQ9Ik0xMzggODRsMzAtMTh2NjBsLTMwLTE4eiIgZmlsbD0iIzNmYjk1MCIvPjwvc3ZnPg==",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cmVjdCB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgcng9Ijk2IiBmaWxsPSIjMTYxYjIyIi8+PHBhdGggZD0iTTE0NCAxNzZoMTYwYTQ4IDQ4IDAgMCAxIDQ4IDQ4djY0YTQ4IDQ4IDAgMCAxLTQ4IDQ4SDE0NGE0OCA0OCAwIDAgMS00OC00OHYtNjRhNDggNDggMCAwIDEgNDgtNDh6IiBmaWxsPSIjM2ZiOTUwIi8+PHBhdGggZD0iTTM2OCAyMjRsODAtNDh2MTYwbC04MC00OHoiIGZpbGw9IiMzZmI5NTAiLz48L3N2Zz4=",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
